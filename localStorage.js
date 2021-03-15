@@ -1,12 +1,10 @@
 
-
-const form = document.getElementById("form");
-const result = document.getElementById("list");
+document.getElementById("form").addEventListener('submit',handleSubmit);
+const InsertedCats = document.getElementById("InsertedCats");
 let arr=[];
 
 
-
-function ToDo(name,breed,age,color){
+function cat(name,breed,age,color){  
   this.name = name;
   this.breed = breed;
   this.age = age;
@@ -15,39 +13,42 @@ function ToDo(name,breed,age,color){
   arr.push(this);
 }
 
-function handleSubmit(e){
-  e.preventDefault();
+
+
+function handleSubmit(event){
+  event.preventDefault();
   const name = document.getElementById("name").value;
   const breed = document.getElementById("breed").value;
   const age = document.getElementById("age").value;
   const color = document.getElementById("color").value;
-  let obj = new ToDo(name,breed,age,color);
-  save(); 
- render();
-
-}
-
-function save(){
-  let str = JSON.stringify(arr);
-  localStorage.setItem('data',str);
+  let obj = new cat(name,breed,age,color);
+  convertToString(); 
+  showInsertedCats();
 }
 
 
-function render(){
-  result.innerHTML = '';
+
+function convertToString(){
+  let text = JSON.stringify(arr);   // convert a JavaScript object into a string
+  localStorage.setItem('data',text);
+}
+
+
+function showInsertedCats(){
+  InsertedCats.innerHTML = ''; 
 
   let data = localStorage.getItem("data");
-  let x = JSON.parse(data);
+  let obj = JSON.parse(data);   // Convert string into a JavaScript object
 
- if(x){
+ if(obj){
   let tbl = document.createElement("table");
-  result.appendChild(tbl);
+  InsertedCats.appendChild(tbl);
      
     let caption= document.createElement("caption");
     tbl.appendChild(caption);
     caption.textContent ="Inserted cats"; 
      
-  for(let i=0; i<x.length;i++){
+  for(let i=0; i<obj.length;i++){
       
     let row = document.createElement("tr");
     tbl.appendChild(row);
@@ -59,25 +60,24 @@ function render(){
       
     let cell2 = document.createElement("td");
     row.appendChild(cell2);
-    cell2.textContent = x[i].name; 
+    cell2.textContent = obj[i].name; 
              
     let cell3 = document.createElement("td");
     row.appendChild(cell3);
-    cell3.textContent = x[i].breed;   
+    cell3.textContent = obj[i].breed;   
 
     let cell4 = document.createElement("td");
     row.appendChild(cell4); 
-    cell4.textContent = x[i].age;   
+    cell4.textContent = obj[i].age;   
       
     let cell5 = document.createElement("td");
     row.appendChild(cell5);
-    cell5.textContent = x[i].color;   
+    cell5.textContent = obj[i].color;   
   }
  }
   
 }
 
 
-form.addEventListener('submit',handleSubmit)
 
-render();
+
