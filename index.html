@@ -1,119 +1,96 @@
 <!DOCTYPE html>
 <html>
-    
+
 <head>
-    
-    <link rel="stylesheet" type="text/css" href="index.css">
-    
-    </head>
-    
+    <link rel="stylesheet" type="text/css" href="./CSS/reset.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/index.css">
+    <script src="https://kit.fontawesome.com/bc3ab922fc.js" crossorigin="anonymous"></script>
+</head>
+
 <body>
-    
-    
-    
-    
-    <div style="height:70px;background-color:gray;margin-left:-20px;margin-top:-20px">
-        
-        <div style="padding-left:20px;padding-top:20px" class="but"> 
-   <a href="index.html">  <button>Home</button> </a>
-   <a href="adoptCat.html">  <button>ِAdopt cat</button> </a>
-   <a href="#"> <button>Login</button> </a>
-   <a href="#">   <button>Sign up</button> </a>
-   <a href="#">   <button>Contact us</button> </a>
-     
-        </div>
+    <header>
 
-        
-    </div>
-    
-   
-     <br> <br>
-
-    <header>  
-    <a href="adoptCat.html">Click here for cat adoption</a>
-   
-    <h1 style="">Adopt cats</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="adoptCat.html"> Adopt cat </a></li>
+                <li><a href="#"> Login</a></li>
+                <li><a href="#"> Sign up </a></li>
+                <li><a href="#"> Contact us</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    
-    
-    
-   
+
+    <header>
+        <a href="adoptCat.html">Click here for cat adoption</a>
+
+        <h1>Adopt cats</h1>
+    </header>
+
     <script src="api.js"></script>
-    
-    <div class="gallery">  
-    <div id="cocktail"></div>
-    <div id="overlay"></div>
+    <main>
+        <section class="apiImage">
+
+            <img src="" id="targetImage">
+
+            
+            <div class="desc">
+
+                <br>
+                <div id="id">Id :</div>
+                <div id="url"> url : </div>
+                <br>
+            </div>
+
+        </section>
 
 
-    <div id="image" class="image"></div>
-    <div class="desc"> 
-        
-        <br>
-        <div id="id">Id :</div>
-        <div id="url"> url : </div>
-        <br>
-    </div>
-    
-        </div>
+        <section class="container">
 
-    
-    
-    
-    <br><br>  <br><br>  <br><br>  <br><br>  <br><br>  <br><br><br><br><br><br> <br><br><br><br><br><br> <br><br><br><br>
-    <hr style="">
-    
-    <div class="firstDiv">
-    <img src="images/97958059-surprised-seated-stylish-cat-looking-up-to-side-on-a-white-background.jpg" width="200" height="200"> 
-    <img src="images/download%20(1).jpg" width="200" height="200">
-    <img src="images/download2.jpg" width="200" height="200">
-    <img src="images/2.jpg" width="200" height="200">
-     </div>
-    
-    
-    
-    
-    
-    <div class="secondDiv"> 
-     <button>See more</button>
-     <button style="margin-left:265px;">See more</button>
-     <button style="margin-left:245px;">See more</button>
-     <button style="margin-left:245px;">See more</button>
-        </div>
-    
-    
-    <br> <br> <br><br> <br>
-    <div class="thirdDiv"> 
-    <img src="images/2.jpg">
-    <img src="images/crop.jpg">
-    <img src="images/images.jpg">
-    <img src="images/images%20(1).jpg">
-    </div>
-  
-    
-  
-    
-    
-    <div class="footer" style="background-color:  #ff9999;height:250px;margin-left:-8px;padding-left:60px;">
-    <br> <br> <br>
-        <img src="images/facebook.png">  
-        <span> Adopt cats</span>
-        <br> <br>
-        <img src="images/instagram.jpg"> 
-        <span>Adopt cats</span>
-        <br> <br>
-        <img src="images/twitter.png">
-        <span> Adopt cats</span>
-        <br> <br>
-        
-        <address style="color:black; margin-left:350px;margin-top:-140px;font-weight: 900"> Address :  Jordan - Amman </address> <br>
-   
-       <i><span style="color:black; margin-left:350px;margin-top:-150px;font-weight: 900;"> Email : adoptcats@yahoo.con</span>  </i> 
-    </div>
-    
-    
-    
-    </body>
-    
+            <article>
+                <img src="images/download.jpg">
+                <button>See more</button>
+            </article>
+            <article>
+                <img src="images/download%20(1).jpg">
+                <button>See more</button>
+            </article>
+            <article>
+                <img src="images/download2.jpg">
+                <button>See more</button>
+            </article>
+
+            <!--             
+            <section class="thirdDiv">
+                <img src="images/2.jpg">
+                <img src="images/crop.jpg">
+                <img src="images/images.jpg">
+                <img src="images/images%20(1).jpg">
+            </section> -->
+        </section>
+
+
+    </main>
+
+
+
+
+    <footer>
+
+        <section>
+            <p> &copy; All right reserved </p>
+        </section>
+        <section class="social">
+            <i class="fa-brands fa-facebook">Facebook</i>
+            <i class="fa-brands fa-instagram">Instagram</i>
+            <i class="fa-brands fa-twitter">Twitter</i>
+        </section>
+      
+    </footer>
+
+
+
+</body>
+
 
 </html>

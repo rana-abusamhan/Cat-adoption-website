@@ -21,6 +21,5 @@ ajax_get('https://api.thecatapi.com/v1/images/search?size=full&fbclid=IwAR0Awb4W
   document.getElementById("id").innerHTML += data[0]["id"];
   document.getElementById("url").innerHTML += data[0]["url"];
 
-  var html = '<img src="' + data[0]["url"] + '">';
-  document.getElementById("image").innerHTML = html;
+  document.getElementById("targetImage").setAttribute("src",data[0]["url"]);
 });
